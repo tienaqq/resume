@@ -24,12 +24,13 @@ const address = window.addEventListener("load", () => {
 });
 
 function generatePDR() {
+  document.getElementById("download_pdf").style.margin = "0 auto";
   const element = document.getElementById("download_pdf");
   var opt = {
     margin: 0,
     filename: "Tien resume.pdf",
     image: { type: "jpeg", quality: 1 },
-    html2canvas: { scale: 2, logging: true, dpi: 192, letterRendering: true },
+    html2canvas: { scale: 4 },
     jsPDF: { unit: "in", format: "a4", orientation: "portrait" },
   };
 
